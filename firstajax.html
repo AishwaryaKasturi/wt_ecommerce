@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function Test()
+{
+    var ajax=new XMLHttpRequest();
+    ajax.open("get","https://raw.githubusercontent.com/AishwaryaKasturi/wt_ecommerce/master/testWT.json");
+    ajax.onload=function(){
+        console.log(ajax.responseText);
+
+    }
+    ajax.onerror=function(){
+        alert("connection fail");
+    }
+ajax.send();
+}
+</script>
+
+</head>
+
+<body>
+    <input type ="button" value="getjason" onclick="Test();">
+</body>
+</html>
