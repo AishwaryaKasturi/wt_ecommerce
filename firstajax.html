@@ -7,6 +7,7 @@ function Test()
     ajax.open("get","https://raw.githubusercontent.com/AishwaryaKasturi/wt_ecommerce/master/testWT.json");
     ajax.onload=function(){
         console.log(ajax.responseText);
+        document.getElementById.('result').innerHTML=ajax.responseText;
 
     }
     ajax.onerror=function(){
@@ -20,5 +21,6 @@ ajax.send();
 
 <body>
     <input type ="button" value="get json" onclick="Test();">
+    <p id="result"></p>
 </body>
 </html>
